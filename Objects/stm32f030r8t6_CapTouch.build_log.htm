@@ -1,0 +1,323 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: farid mfi-45219, NA, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.4.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TARMCM1.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+E:\Keil projects\STM32F030R8T6_CapTouch\stm32f030r8t6_CapTouch.uvprojx
+Project File Date:  11/02/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling system_stm32f0xx.c...
+assembling startup_stm32f030x8.s...
+compiling main.c...
+captouch.c(18): warning: padding struct 'struct captouch_t' with 1 byte to align 'CalibrationValue' [-Wpadded]
+  int      CalibrationValue[CAPTOUCH_TOTAL_TOUCH_KEY];
+           ^
+captouch.c(15): warning: padding size of 'struct captouch_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct captouch_t{
+               ^
+captouch.c(36): warning: no previous prototype for function 'CapTouch_Struct_Init' [-Wmissing-prototypes]
+void CapTouch_Struct_Init(void){
+     ^
+captouch.c(36): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Struct_Init(void){
+^
+static 
+captouch.c(55): warning: no previous prototype for function 'CapTouch_Set_Key_Pin_Input' [-Wmissing-prototypes]
+void CapTouch_Set_Key_Pin_Input(uint8_t current_channel){
+     ^
+captouch.c(55): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Set_Key_Pin_Input(uint8_t current_channel){
+^
+static 
+captouch.c(59): warning: no previous prototype for function 'CapTouch_Set_Key_Pin_Analog' [-Wmissing-prototypes]
+void CapTouch_Set_Key_Pin_Analog(uint8_t current_channel){
+     ^
+captouch.c(59): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Set_Key_Pin_Analog(uint8_t current_channel){
+^
+static 
+captouch.c(63): warning: no previous prototype for function 'CapTouch_Set_Key_Pin_Output' [-Wmissing-prototypes]
+void CapTouch_Set_Key_Pin_Output(uint8_t current_channel){
+     ^
+captouch.c(63): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Set_Key_Pin_Output(uint8_t current_channel){
+^
+static 
+captouch.c(68): warning: no previous prototype for function 'CapTouch_Set_Key_Pin_Output_Low' [-Wmissing-prototypes]
+void CapTouch_Set_Key_Pin_Output_Low(uint8_t current_channel){
+     ^
+captouch.c(68): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Set_Key_Pin_Output_Low(uint8_t current_channel){
+^
+static 
+captouch.c(72): warning: no previous prototype for function 'CapTouch_Set_Key_Pin_Output_High' [-Wmissing-prototypes]
+void CapTouch_Set_Key_Pin_Output_High(uint8_t current_channel){
+     ^
+captouch.c(72): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Set_Key_Pin_Output_High(uint8_t current_channel){
+^
+static 
+captouch.c(83): warning: while loop has empty body [-Wempty-body]
+        while ((ADC1->CR & ADC_CR_ADEN) != 0);
+                                             ^
+captouch.c(83): note: put the semicolon on a separate line to silence this warning
+captouch.c(76): warning: no previous prototype for function 'CapTouch_ADC_Register_Config' [-Wmissing-prototypes]
+void CapTouch_ADC_Register_Config(void){
+     ^
+captouch.c(76): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_ADC_Register_Config(void){
+^
+static 
+captouch.c(99): warning: no previous prototype for function 'CapTouch_ADC_Wakeup' [-Wmissing-prototypes]
+void CapTouch_ADC_Wakeup(void){
+     ^
+captouch.c(99): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_ADC_Wakeup(void){
+^
+static 
+captouch.c(103): warning: no previous prototype for function 'CapTouch_ADC_Sleep' [-Wmissing-prototypes]
+void CapTouch_ADC_Sleep(void){
+     ^
+captouch.c(103): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_ADC_Sleep(void){
+^
+static 
+captouch.c(111): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        return ADC1->DR;
+        ~~~~~~ ~~~~~~^~
+captouch.c(107): warning: no previous prototype for function 'CapTouch_ADC_Sample' [-Wmissing-prototypes]
+uint16_t CapTouch_ADC_Sample(uint8_t channel){
+         ^
+captouch.c(107): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint16_t CapTouch_ADC_Sample(uint8_t channel){
+^
+static 
+captouch.c(114): warning: no previous prototype for function 'CapTouch_Precharge_SH_Cap' [-Wmissing-prototypes]
+void CapTouch_Precharge_SH_Cap(uint8_t current_channel){
+     ^
+captouch.c(114): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Precharge_SH_Cap(uint8_t current_channel){
+^
+static 
+captouch.c(122): warning: no previous prototype for function 'CapTouch_ADC_Sample1' [-Wmissing-prototypes]
+void CapTouch_ADC_Sample1(uint8_t current_channel){
+     ^
+captouch.c(122): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_ADC_Sample1(uint8_t current_channel){
+^
+static 
+captouch.c(127): warning: no previous prototype for function 'CapTouch_Precharge_Button' [-Wmissing-prototypes]
+void CapTouch_Precharge_Button(uint8_t current_channel){
+     ^
+captouch.c(127): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Precharge_Button(uint8_t current_channel){
+^
+static 
+captouch.c(135): warning: no previous prototype for function 'CapTouch_ADC_Sample2' [-Wmissing-prototypes]
+void CapTouch_ADC_Sample2(uint8_t current_channel){
+     ^
+captouch.c(135): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_ADC_Sample2(uint8_t current_channel){
+^
+static 
+captouch.c(141): warning: no previous prototype for function 'CapTouch_Read_Delta' [-Wmissing-prototypes]
+void CapTouch_Read_Delta(uint8_t current_channel){
+     ^
+captouch.c(141): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Read_Delta(uint8_t current_channel){
+^
+static 
+captouch.c(151): warning: no previous prototype for function 'CapTouch_Calibration' [-Wmissing-prototypes]
+void CapTouch_Calibration(void){
+     ^
+captouch.c(151): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Calibration(void){
+^
+static 
+captouch.c(164): warning: no previous prototype for function 'CapTouch_Response' [-Wmissing-prototypes]
+void CapTouch_Response(uint8_t current_channel){
+     ^
+captouch.c(164): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Response(uint8_t current_channel){
+^
+static 
+captouch.c(173): warning: no previous prototype for function 'CapTouch_Check_Trigger' [-Wmissing-prototypes]
+void CapTouch_Check_Trigger(uint8_t current_channel){
+     ^
+captouch.c(173): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Check_Trigger(uint8_t current_channel){
+^
+static 
+captouch.c(191): warning: no previous prototype for function 'CapTouch_Check_Touch_Duration' [-Wmissing-prototypes]
+void CapTouch_Check_Touch_Duration(uint8_t current_channel, uint32_t refernce_time){
+     ^
+captouch.c(191): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Check_Touch_Duration(uint8_t current_channel, uint32_t refernce_time){
+^
+static 
+captouch.c(215): warning: no previous prototype for function 'CapTouch_Scan_Sensors' [-Wmissing-prototypes]
+void CapTouch_Scan_Sensors(uint32_t refernce_time){
+     ^
+captouch.c(215): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Scan_Sensors(uint32_t refernce_time){
+^
+static 
+captouch.c(221): warning: no previous prototype for function 'CapTouch_Short_Pressed' [-Wmissing-prototypes]
+uint8_t CapTouch_Short_Pressed(uint8_t current_channel){
+        ^
+captouch.c(221): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t CapTouch_Short_Pressed(uint8_t current_channel){
+^
+static 
+captouch.c(229): warning: no previous prototype for function 'CapTouch_Long_Pressed' [-Wmissing-prototypes]
+uint8_t CapTouch_Long_Pressed(uint8_t current_channel){
+        ^
+captouch.c(229): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t CapTouch_Long_Pressed(uint8_t current_channel){
+^
+static 
+captouch.c(238): warning: no previous prototype for function 'CapTouch_Constant_Pressed' [-Wmissing-prototypes]
+uint8_t CapTouch_Constant_Pressed(uint8_t current_channel){
+        ^
+captouch.c(238): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t CapTouch_Constant_Pressed(uint8_t current_channel){
+^
+static 
+captouch.c(246): warning: no previous prototype for function 'CapTouch_Get_RawADC1' [-Wmissing-prototypes]
+uint16_t CapTouch_Get_RawADC1(uint8_t current_channel){
+         ^
+captouch.c(246): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint16_t CapTouch_Get_RawADC1(uint8_t current_channel){
+^
+static 
+captouch.c(250): warning: no previous prototype for function 'CapTouch_Get_RawADC2' [-Wmissing-prototypes]
+uint16_t CapTouch_Get_RawADC2(uint8_t current_channel){
+         ^
+captouch.c(250): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint16_t CapTouch_Get_RawADC2(uint8_t current_channel){
+^
+static 
+captouch.c(254): warning: no previous prototype for function 'CapTouch_Get_RawDifferentialADC' [-Wmissing-prototypes]
+int CapTouch_Get_RawDifferentialADC(uint8_t current_channel){
+    ^
+captouch.c(254): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int CapTouch_Get_RawDifferentialADC(uint8_t current_channel){
+^
+static 
+captouch.c(258): warning: no previous prototype for function 'CapTouch_Get_Calibration_Value' [-Wmissing-prototypes]
+int CapTouch_Get_Calibration_Value(uint8_t current_channel){
+    ^
+captouch.c(258): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int CapTouch_Get_Calibration_Value(uint8_t current_channel){
+^
+static 
+captouch.c(262): warning: no previous prototype for function 'CapTouch_Get_Touch_Duration' [-Wmissing-prototypes]
+uint32_t CapTouch_Get_Touch_Duration(uint8_t current_channel){
+         ^
+captouch.c(262): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint32_t CapTouch_Get_Touch_Duration(uint8_t current_channel){
+^
+static 
+captouch.c(266): warning: no previous prototype for function 'CapTouch_Get_Touch_Response' [-Wmissing-prototypes]
+uint8_t CapTouch_Get_Touch_Response(uint8_t current_channel){
+        ^
+captouch.c(266): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t CapTouch_Get_Touch_Response(uint8_t current_channel){
+^
+static 
+captouch.c(270): warning: no previous prototype for function 'CapTouch_Get_Reference_Timer_Use_Flag' [-Wmissing-prototypes]
+uint8_t CapTouch_Get_Reference_Timer_Use_Flag(void){
+        ^
+captouch.c(270): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t CapTouch_Get_Reference_Timer_Use_Flag(void){
+^
+static 
+captouch.c(278): warning: no previous prototype for function 'CapTouch_Get_ErrorCode' [-Wmissing-prototypes]
+uint8_t CapTouch_Get_ErrorCode(uint8_t current_channel){
+        ^
+captouch.c(278): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t CapTouch_Get_ErrorCode(uint8_t current_channel){
+^
+static 
+captouch.c(288): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+  data_out[5]=CapTouch_Get_Touch_Duration(current_channel);
+             ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+captouch.c(282): warning: no previous prototype for function 'CapTouch_Get_Debug_Data' [-Wmissing-prototypes]
+void CapTouch_Get_Debug_Data(uint8_t current_channel, int *data_out){
+     ^
+captouch.c(282): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Get_Debug_Data(uint8_t current_channel, int *data_out){
+^
+static 
+captouch.c(293): warning: no previous prototype for function 'CapTouch_Init' [-Wmissing-prototypes]
+void CapTouch_Init(void){
+     ^
+captouch.c(293): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CapTouch_Init(void){
+^
+static 
+captouch.c(33): warning: no previous extern declaration for non-static variable 'CapTouch' [-Wmissing-variable-declarations]
+captouch_t CapTouch;
+           ^
+captouch.c(33): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+captouch_t CapTouch;
+^
+39 warnings generated.
+compiling captouch.c...
+linking...
+Program Size: Code=1024 RO-data=196 RW-data=0 ZI-data=1696  
+".\Objects\stm32f030r8t6_CapTouch.axf" - 0 Error(s), 39 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F0xx_DFP.2.1.0.pack
+                Keil.STM32F0xx_DFP.2.1.0
+                STMicroelectronics STM32F0 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\EED-R&I\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\EED-R&I\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil.Standalone::Device:Startup:1.0.0
+      Source file:   Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\arm\startup_stm32f030x8.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F0xx_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
